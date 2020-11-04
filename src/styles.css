@@ -11,8 +11,244 @@ body {
     -webkit-font-smoothing: antialiased !important;
 }
 
+input, button {
+    outline: 0;
+}
+
+.content {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
 header#main-header {
+    height: 46px;
+    background: #FFF;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+}
+
+header#main-header .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
+}
+
+header#main-header .content>img {
+    width: 40px;
+    height: 40px;
+}
+
+header#main-header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header#main-header nav ul li {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #667580;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+header#main-header nav ul li:first-child {
+    margin-left: 0px;
+}
+
+header#main-header nav ul li img {
+    width: 32px;
+    height: 32px;
+    margin-right: 7px;
+}
+
+header#main-header div.right-side {
+    display: flex;
+}
+
+header#main-header div.right-side input {
+    width: 220px;
+    background: #F5F8FA;
+    border: 1px solid #E6ECF0;
+    height: 34px;
+    padding: 0 40px 0 12px;
+    border-radius: 16px;
+    color: #667581;
+    font-size: 12px;
+    background: url('./images/search.svg') no-repeat 180px center;
+}
+
+header#main-header div.right-side img {
+    height: 34px;
+    width: 35px;
+    border-radius: 50%;
+    margin: 0 15px;
+}
+
+header#main-header div.right-side button {
+    width: 90px;
+    height: 34px;
+    background: #3bb9e3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFF;
+
+    border: 0;
+    border-radius: 16px;
+}
+
+div.banner {
+    height: 380px;
+    width: 100%;
+    background: #3BB9E3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+}
+
+div.bar {
+    height: 59px;
+    background: #FFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+div.bar .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 285px;
+    height: 100%
+}
+
+div.bar .content ul {
+    display: flex;
+    list-style: none;
+    height: 100%;
+}
+
+div.bar .content ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    position: relative;
+}
+
+div.bar .content ul li.active::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #3bb9e3;
+}
+
+div.bar .content ul li span {
+    color: #667580;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+div.bar .content ul li strong {
+    color: #667580;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+div.bar .content ul li.active strong {
+    color: #3bb9e3;
+}
+
+div.bar .content .actions {
+    display: flex;
+    align-items: center;
+}
+
+div.bar .content .actions button {
+    width: 90px;
+    height: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 14px;
+    color: #3bb9e3;
+
+    border: 1px solid #3bb9e3;
+    border-radius: 16px;
+
+    margin-right: 20px;
+}
+
+div.bar .content .actions img {
+    height: 40px;
+    width: 40px;
+}
+
+div.wrapper-content {
+    display: flex;
+}
+
+div.wrapper-content aside.profile {
+    width: 260px;
+}
+
+div.wrapper-content aside.profile img.avatar {
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    margin-top: -130px;
+}
+
+div.wrapper-content aside.profile h1 {
+    font-size: 21px;
+    color: #1F2226;
+    margin-top: 10px;
+}
+
+div.wrapper-content aside.profile span {
+    font-size: 14px;
+    color: #53626c;
+}
+
+div.wrapper-content aside.profile p {
+    font-size: 14px;
+    color: #1f2226;
+    margin-top: 15px;
+}
+
+div.wrapper-content aside.profile ul {
+    margin-top: 20px;
+    list-style: none;
+}
+
+div.wrapper-content aside.profile ul li {
+    font-size: 14px;
+    color: #657786;
+
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+div.wrapper-content aside.profile ul li:first-child {
+    margin: 0;
+}
+
+div.wrapper-content aside.profile ul li img {
+    margin-right: 10px;
 }
