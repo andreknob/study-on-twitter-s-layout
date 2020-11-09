@@ -1,0 +1,91 @@
+div.wrapper-content { 
+    .timeline {
+        flex: 1;
+        background: #FFF;
+        margin: 10px 20px 0;
+        
+        @mixin a-style($color, $font-size, $margin-left) {
+            text-decoration: none;
+            font-weight: bold;
+            color: $color;
+            font-size: $font-size;
+            margin-left: $margin-left;
+
+            &:first-child {
+                margin: 0;
+            }
+        }
+
+        nav {
+            border-bottom: 1px solid #E6ECF0;
+            padding: 10px 15px;
+
+            a {
+                @include a-style($twitter-blue, 18px, 20px);
+
+                .active {
+                    margin: 0;
+                }
+             }
+        }
+
+        ul.tweets {
+            list-style: none;
+
+            li {
+                border-bottom: 1px solid #E6ECF0;
+                padding: 10px 15px;
+                display: flex;
+
+                &:last-child {
+                    margin-bottom: 200px;
+                }
+
+                > img {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                }
+
+                .tweet-info {
+                    margin-left: 10px;
+                    display: flex;
+                    flex-direction: column;
+
+                    strong {
+                        font-size: 14px;
+                        color: #1f2326;
+
+                        span {
+                            font-weight: normal;
+                            font-size: 13px;
+                            color: #7b8b9a;
+                        }
+                    }
+
+                    p {
+                        font-size: 14px;
+                        color: #1f2326;
+                        margin-top: 5px;
+                    }
+                }
+
+                .actions {
+                    display: flex;
+                    margin-top: 20px;
+
+                    a {
+                        @include a-style(#667580, 12px, 30px);
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

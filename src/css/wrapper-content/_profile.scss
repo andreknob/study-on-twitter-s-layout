@@ -1,0 +1,104 @@
+div.wrapper-content {
+    aside.profile {
+        width: 260px;
+
+        img.avatar {
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #FFF;
+            margin-top: -130px;
+        }
+        
+        h1 {
+            font-size: 21px;
+            color: #1F2226;
+            margin-top: 10px;
+        }
+
+        span {
+            font-size: 14px;
+            color: #53626c;
+        }
+
+        p {
+            font-size: 14px;
+            color: #1f2226;
+            margin-top: 15px;
+        }
+
+        ul {
+            margin-top: 20px;
+            list-style: none;
+        }
+
+        ul.list li {
+            font-size: 14px;
+            color: #657786;
+        
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+
+            &:first-child {
+                margin: 0;
+            }
+
+            img {
+                margin-right: 10px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .widget {
+            margin-top: 20px;
+
+            strong {
+                font-weight: normal;
+                color: $twitter-blue;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+
+                img {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        @mixin li-style($side-size, $radius, $margin-bottom) {
+            width: $side-size;
+            height: $side-size;
+            background: #d0d5d9;
+            flex: 1 0 auto;
+            border-radius: $radius;
+            margin: 0 5px $margin-bottom 0;
+        }
+
+        .followers {
+            ul {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    @include li-style(45px, 50%, 10px);
+                }
+            }
+        }
+
+        .images {
+            ul {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    @include li-style(80px, 8px, 5px);
+                }
+            }
+        } 
+    }
+}

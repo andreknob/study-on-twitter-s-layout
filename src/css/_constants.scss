@@ -1,0 +1,18 @@
+@mixin button-style($width, $height) {
+    width: $width;
+    height: $height;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 14px;
+    color: $twitter-blue;
+    background-color: #FFF;
+
+    border: 1px solid $twitter-blue;
+    border-radius: 16px;
+}
+
+$twitter-blue: #3bb9e3;

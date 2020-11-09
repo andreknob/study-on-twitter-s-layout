@@ -1,0 +1,106 @@
+
+
+div.wrapper-content {
+    aside.widgets {
+        width: 290px;
+        margin-top: 10px;
+
+        .widget {
+            background: #FFF;
+            padding: 15px;
+
+            .title {
+                display: flex;
+                align-items: baseline;
+
+                strong {
+                    font-size: 18px;
+                    color: #1f2226;
+                }
+
+                a {
+                    color: $twitter-blue;
+                    font-size: 12px;
+                    text-decoration: none;
+                    position: relative;
+                    padding-left: 10px;
+                
+                    &::before {
+                        content: '';
+                        width: 2px;
+                        height: 2px;
+                        border-radius: 50%;
+                        background: #000;
+                        margin: 0 5px;
+                        position: absolute;
+                        left: 0;
+                        top: 6px;
+                    }
+                }
+
+            }            
+        }
+
+        .follow {
+            ul {
+                list-style: none;
+                margin-top: 10px;
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #ccd6dd;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        border: 0;
+                    }
+
+                    .profile {
+                        display: flex;
+                        align-items: center;
+
+                        div.who_to_follow_avatar {
+                            width: 45px;
+                            height: 45px;
+                            background: #d0d5d9;
+                            border-radius: 50%;
+                            flex: 1 0 auto;
+                            margin: 0 5px 10px 0;
+                        }
+
+                        .info {
+                            margin-left: 5px;
+                            display: flex;
+                            flex-direction: column;
+
+                            strong {
+                                font-size: 14px;
+                                color: #1f2326;
+
+                                span {
+                                    font-weight: normal;
+                                    color: #9a9a9a;
+                                }
+                            }
+
+                            button {
+                                @include button-style(90px, 27px);
+                                margin-top: 4px;
+                            }
+                        }
+                    }                    
+
+                    > a {
+                        color: #ccd6dd;
+                        text-decoration: none;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
